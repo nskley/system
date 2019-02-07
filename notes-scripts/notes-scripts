@@ -1,0 +1,16 @@
+#! /bin/sh
+# $1=expresseion ne marche pas!
+
+#concatenation:
+vari=impecc
+variable=parfait
+echo ${vari}able #remplace vari par sa valeur et le concatene evac la chaine able
+
+#une variable non initialisee vaut la chaine vide
+
+var=p
+varwd
+${var}wd #execute la commande pwd
+
+#code de retour de commande
+#o=vrai !0=faux

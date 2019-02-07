@@ -1,0 +1,102 @@
+repertoire principale: /Documents/system$ 
+
+exo1:
+1)
+mkas@kalikane:~/Documents/system$ ls users/linfg/linfg0/S3/*.txt
+2)
+mkas@kalikane:~/Documents/system$ echo 'Le renard dit "Oh, Monsieur du corbeau"'
+mkas@kalikane:~/Documents/system$ echo "j'ai gagne \$100 a l'Alcazar"
+mkas@kalikane:~/Documents/system$ echo 'Commentaire : \*Initialisation*\'
+
+
+exo2:
+1)
+mkas@kalikane:~/Documents/system$ pwd
+2)
+mkas@kalikane:~/Documents/system$ mkdir -p REP/SOU-REP/
+3) 
+mkas@kalikane:~/Documents/system$ cp users/linfg/linfg0/S3/liste.txt REP/SOU-REP/
+4)
+mkas@kalikane:~/Documents/system$ cd REP/SOU-REP/
+mkas@kalikane:~/Documents/system/REP/SOU-REP$ ls
+5)
+mkas@kalikane:~/Documents/system/REP/SOU-REP$ mv liste.txt ../
+6)
+mkas@kalikane:~/Documents/system/REP/SOU-REP$ cd ../../
+mkas@kalikane:~/Documents/system$ rm -r REP
+
+
+exo3:
+1)
+mkas@kalikane:~/Documents/system$ cp users/linfg/linfg0/S3/liste.txt ./
+2)
+mkas@kalikane:~/Documents/system$ more liste.txt 
+3)
+mkas@kalikane:~/Documents/system$ ls -l
+total 44
+-rw------- 1 mkas mkas  3773 févr.  5 19:51 liste.txt
+-rw-r--r-- 1 mkas mkas   767 févr.  5 19:50 tp1
+drwx------ 3 mkas mkas  4096 sept. 26 11:38 users
+-rw-r--r-- 1 mkas mkas 30720 févr.  5 19:31 users.tar
+4)
+mkas@kalikane:~/Documents/system$ chmod u-w liste.txt 
+5)
+mkas@kalikane:~/Documents/system$ ls -l
+total 44
+-r-------- 1 mkas mkas  3773 févr.  5 19:51 liste.txt
+-rw-r--r-- 1 mkas mkas   767 févr.  5 19:50 tp1
+drwx------ 3 mkas mkas  4096 sept. 26 11:38 users
+-rw-r--r-- 1 mkas mkas 30720 févr.  5 19:31 users.tar
+7)
+mkas@kalikane:~/Documents/system$ chmod u+w liste.txt 
+mkas@kalikane:~/Documents/system$ ls -l
+total 44
+-rw------- 1 mkas mkas  3773 févr.  5 19:51 liste.txt
+-rw-r--r-- 1 mkas mkas   767 févr.  5 19:50 tp1
+drwx------ 3 mkas mkas  4096 sept. 26 11:38 users
+-rw-r--r-- 1 mkas mkas 30720 févr.  5 19:31 users.tar
+
+
+exo4:
+mkas@kalikane:~/Documents/system$ tail -n -5 liste.txt
+affiche les 5 dernieres lignes de liste.txt
+ 
+mkas@kalikane:~/Documents/system$ tail -n +5 liste.txt 
+affiche les lignes de liste.txt depuis la 5
+
+mkas@kalikane:~/Documents/system$ head -5 liste.txt 
+affiche les 5 premiers lignes de liste.txt
+
+mkas@kalikane:~/Documents/system$ head liste.txt 
+affiche les 10premieres lignes liste.txt
+
+
+
+exo5:
+mkas@kalikane:~/Documents/system$ sort +2.6n -o temp liste.txt 
+cette commande va 3ieme à la colone du fichier et y fait un tri numerique à partir du 6ieme caractere de cette colone
+on obtient ainsi le resultat attendu sans etape intermediaire
+
+
+exo6:
+1)
+mkas@kalikane:~/Documents/system$ grep 'LAURENT' liste.txt 
+2)
+mkas@kalikane:~/Documents/system$ grep -v [0-9][0-9][0-9] liste.txt 
+3)
+mkas@kalikane:~/Documents/system$ grep '1' liste.txt 
+
+
+exo7:
+1)
+mkas@kalikane:~/Documents/system$ echo "Est-ce que j'arrive" > tdm01.txt 
+mkas@kalikane:~/Documents/system$ echo 'a rediriger la' >>tdm01.txt 
+mkas@kalikane:~/Documents/system$ echo 'sortie standard ?' >> tdm01.txt 
+2)
+cat liste.txt: affiche le contenu de liste.txt
+cat liste.txt > liste2.txt : cree le fichier liste2.txt(s'il n'existe pas) et y met le contenu de liste.txt(s'il exite, il sera d'abord ecrasé)
+rm liste2.txt : supprime le fichier liste2.txt
+cat liste.txt | tail -5 : affiche les 5 dernieres lignes de liste.txt
+3)
+mkas@kalikane:~/Documents/system$ tail -n +5 liste.txt | head -6
+
