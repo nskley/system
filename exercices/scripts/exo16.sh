@@ -30,6 +30,6 @@ fi
 while [ $nblignes -gt 0 ]
 do
 	head -n $nblignes $fich|tail -1
-	nblignes=`expr $nblignes -  1`
-	done
+	nblignes=`expr $nblignes - 1`
+done
 exit 0

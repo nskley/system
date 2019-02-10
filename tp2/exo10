@@ -1,0 +1,5 @@
+1)
+mkas@kalikane:~/Documents/system/tp2$ grep "linfg1$" liste.txt|cut -d' ' -f1
+2)
+mkas@kalikane:~/Documents/system/tp2$ grep "linfg156$" liste.txt|cut -d' ' -f1
+

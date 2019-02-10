@@ -1,0 +1,24 @@
+exo1:
+1)
+mkas@kalikane:~/Documents/system$ ls users/linfg/linfg0/S3/
+2)
+mkas@kalikane:~/Documents/system$ echo 'Le renard dit "Oh, Monsieur du corbeau"'
+mkas@kalikane:~/Documents/system$ echo "j'ai gagne \$100 a l'Alcazar"
+mkas@kalikane:~/Documents/system$ echo 'Commentaire : \*Initialisation*\'
+
+
+exo2:
+1)
+mkas@kalikane:~/Documents/system$ pwd
+2)
+mkas@kalikane:~/Documents/system$ mkdir -p REP/SOU-REP/
+3)
+mkas@kalikane:~/Documents/system$ cp users/linfg/linfg0/S3/liste.txt REP/SOU-REP/
+4)
+mkas@kalikane:~/Documents/system$ cd REP/SOU-REP/mkas@kalikane:~/Documents/system/REP/SOU-REP$ ls
+liste.txt
+mkas@kalikane:~/Documents/system/REP/SOU-REP$ mv liste.txt ../
+mkas@kalikane:~/Documents/system/REP/SOU-REP$ cd ../../
+mkas@kalikane:~/Documents/system$ rm -r REP
+mkas@kalikane:~/Documents/system$ 
+
