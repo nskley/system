@@ -1,0 +1,29 @@
+fic.txt contient: 
+ceci est 
+un texte
+dans un fichier
+
+remplacemant:
+sed -e 's/ce/to/' fic.txt
+toci...
+
+sed -e 's/te//' fic.txt
+supprime le premier 'te' recontré dans chaque ligne
+
+sed -e 's/te/g//' fic.txt
+le g de 's/te/g//' remplace toutes les occurrences , pas seulement de la premiere cle de la ligne
+-->ceci est
+
+sed -e 's/s.*t/(&)/' fic.txt
+&:expression reguliere-->partie de la ligne qui correspond à l'expression reguliere
+
+c(eci   est)
+un  t(ext)e
+dans un fichier
+
+sed -e 's/\(.*\) \(.*\)$/\2 \1/' fic.txt
+sous chaine 1:\(.*\)
+sous chaine 2:\(.*\)
+le 1 place le dernier mot de la ligne en debut de ligne
+-->est ceci
+-->texte un-->fichier dans un

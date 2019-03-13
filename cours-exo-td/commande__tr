@@ -1,0 +1,24 @@
+fic.txt contient: 
+ceci est 
+un texte
+dans un fichier
+
+remplacemant:
+tr 'ce' 'to'  -->
+toti est...
+
+sppression:
+tr -d 'ce' <fic.txt
+supprime dans tout le texte les caracteres c et est
+
+suppression de repetition:
+tr -s ' ' <fic.txt
+reduit toute succession d'espace en un seul espace
+
+remplacemen et suppression des repetitions:
+tr -s '\n' ' ' <fic.txt
+-->ceci est un texte dans un fichier
+
+suppression et suppression des repetitions:
+tr -ds 'ce' ' ' <fic.txt
+
